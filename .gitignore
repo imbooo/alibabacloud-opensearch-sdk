@@ -1,15 +1,10 @@
-libraries
-.libraries.json
-ts/node_modules
-ts/dist
-go.sum
+node_modules
+lib
+types
+dist
 .DS_Store
 coverage.out
 coverage.html
-
-**/csharp/**/bin/
-**/csharp/**/obj/
-**/csharp/**/.vs/
 
 .idea/
 target/
@@ -17,5 +12,4 @@ target/
 .classpath
 .project
 .settings/
-
-python/**/__pycache__/
+*.js

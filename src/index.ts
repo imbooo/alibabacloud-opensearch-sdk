@@ -11,27 +11,28 @@ export class Config extends $tea.Model {
   accessKeyId?: string;
   accessKeySecret?: string;
   userAgent?: string;
+
   static names(): { [key: string]: string } {
     return {
-      endpoint: 'endpoint',
-      protocol: 'protocol',
-      type: 'type',
-      securityToken: 'securityToken',
-      accessKeyId: 'accessKeyId',
-      accessKeySecret: 'accessKeySecret',
-      userAgent: 'userAgent',
+      endpoint: "endpoint",
+      protocol: "protocol",
+      type: "type",
+      securityToken: "securityToken",
+      accessKeyId: "accessKeyId",
+      accessKeySecret: "accessKeySecret",
+      userAgent: "userAgent"
     };
   }
 
   static types(): { [key: string]: any } {
     return {
-      endpoint: 'string',
-      protocol: 'string',
-      type: 'string',
-      securityToken: 'string',
-      accessKeyId: 'string',
-      accessKeySecret: 'string',
-      userAgent: 'string',
+      endpoint: "string",
+      protocol: "string",
+      type: "string",
+      securityToken: "string",
+      accessKeyId: "string",
+      accessKeySecret: "string",
+      userAgent: "string"
     };
   }
 
@@ -52,35 +53,36 @@ export class SearchQuery extends $tea.Model {
   categoryPrediction?: string;
   rawQuery?: string;
   summary?: string;
+
   static names(): { [key: string]: string } {
     return {
-      query: 'query',
-      fetchFields: 'fetch_fields',
-      qp: 'qp',
-      disable: 'disable',
-      firstRankName: 'first_rank_name',
-      secondRankName: 'second_rank_name',
-      userId: 'user_id',
-      abtest: 'abtest',
-      categoryPrediction: 'category_prediction',
-      rawQuery: 'raw_query',
-      summary: 'summary',
+      query: "query",
+      fetchFields: "fetch_fields",
+      qp: "qp",
+      disable: "disable",
+      firstRankName: "first_rank_name",
+      secondRankName: "second_rank_name",
+      userId: "user_id",
+      abtest: "abtest",
+      categoryPrediction: "category_prediction",
+      rawQuery: "raw_query",
+      summary: "summary"
     };
   }
 
   static types(): { [key: string]: any } {
     return {
-      query: 'string',
-      fetchFields: 'string',
-      qp: 'string',
-      disable: 'string',
-      firstRankName: 'string',
-      secondRankName: 'string',
-      userId: 'string',
-      abtest: 'string',
-      categoryPrediction: 'string',
-      rawQuery: 'string',
-      summary: 'string',
+      query: "string",
+      fetchFields: "string",
+      qp: "string",
+      disable: "string",
+      firstRankName: "string",
+      secondRankName: "string",
+      userId: "string",
+      abtest: "string",
+      categoryPrediction: "string",
+      rawQuery: "string",
+      summary: "string"
     };
   }
 
@@ -92,17 +94,18 @@ export class SearchQuery extends $tea.Model {
 export class SearchRequestModel extends $tea.Model {
   headers?: { [key: string]: string };
   query: SearchQuery;
+
   static names(): { [key: string]: string } {
     return {
-      headers: 'headers',
-      query: 'query',
+      headers: "headers",
+      query: "query"
     };
   }
 
   static types(): { [key: string]: any } {
     return {
-      headers: { 'type': 'map', 'keyType': 'string', 'valueType': 'string' },
-      query: SearchQuery,
+      headers: { "type": "map", "keyType": "string", "valueType": "string" },
+      query: SearchQuery
     };
   }
 
@@ -114,17 +117,18 @@ export class SearchRequestModel extends $tea.Model {
 export class SearchResponseModel extends $tea.Model {
   headers?: { [key: string]: string };
   body: SearchResponse;
+
   static names(): { [key: string]: string } {
     return {
-      headers: 'headers',
-      body: 'body',
+      headers: "headers",
+      body: "body"
     };
   }
 
   static types(): { [key: string]: any } {
     return {
-      headers: { 'type': 'map', 'keyType': 'string', 'valueType': 'string' },
-      body: SearchResponse,
+      headers: { "type": "map", "keyType": "string", "valueType": "string" },
+      body: SearchResponse
     };
   }
 
@@ -136,17 +140,18 @@ export class SearchResponseModel extends $tea.Model {
 export class SuggestQuery extends $tea.Model {
   query: string;
   hit?: number;
+
   static names(): { [key: string]: string } {
     return {
-      query: 'query',
-      hit: 'hit',
+      query: "query",
+      hit: "hit"
     };
   }
 
   static types(): { [key: string]: any } {
     return {
-      query: 'string',
-      hit: 'number',
+      query: "string",
+      hit: "number"
     };
   }
 
@@ -158,17 +163,18 @@ export class SuggestQuery extends $tea.Model {
 export class SuggestRequestModel extends $tea.Model {
   headers?: { [key: string]: string };
   query: SuggestQuery;
+
   static names(): { [key: string]: string } {
     return {
-      headers: 'headers',
-      query: 'query',
+      headers: "headers",
+      query: "query"
     };
   }
 
   static types(): { [key: string]: any } {
     return {
-      headers: { 'type': 'map', 'keyType': 'string', 'valueType': 'string' },
-      query: SuggestQuery,
+      headers: { "type": "map", "keyType": "string", "valueType": "string" },
+      query: SuggestQuery
     };
   }
 
@@ -180,17 +186,18 @@ export class SuggestRequestModel extends $tea.Model {
 export class SuggestResponseModel extends $tea.Model {
   headers?: { [key: string]: string };
   body: SuggestionResponse;
+
   static names(): { [key: string]: string } {
     return {
-      headers: 'headers',
-      body: 'body',
+      headers: "headers",
+      body: "body"
     };
   }
 
   static types(): { [key: string]: any } {
     return {
-      headers: { 'type': 'map', 'keyType': 'string', 'valueType': 'string' },
-      body: SuggestionResponse,
+      headers: { "type": "map", "keyType": "string", "valueType": "string" },
+      body: SuggestionResponse
     };
   }
 
@@ -202,17 +209,18 @@ export class SuggestResponseModel extends $tea.Model {
 export class PushDocumentRequestModel extends $tea.Model {
   headers?: { [key: string]: string };
   body: Document[];
+
   static names(): { [key: string]: string } {
     return {
-      headers: 'headers',
-      body: 'body',
+      headers: "headers",
+      body: "body"
     };
   }
 
   static types(): { [key: string]: any } {
     return {
-      headers: { 'type': 'map', 'keyType': 'string', 'valueType': 'string' },
-      body: { 'type': 'array', 'itemType': Document },
+      headers: { "type": "map", "keyType": "string", "valueType": "string" },
+      body: { "type": "array", "itemType": Document }
     };
   }
 
@@ -224,17 +232,18 @@ export class PushDocumentRequestModel extends $tea.Model {
 export class PushDocumentResponseModel extends $tea.Model {
   headers?: { [key: string]: string };
   body: Response;
+
   static names(): { [key: string]: string } {
     return {
-      headers: 'headers',
-      body: 'body',
+      headers: "headers",
+      body: "body"
     };
   }
 
   static types(): { [key: string]: any } {
     return {
-      headers: { 'type': 'map', 'keyType': 'string', 'valueType': 'string' },
-      body: Response,
+      headers: { "type": "map", "keyType": "string", "valueType": "string" },
+      body: Response
     };
   }
 
@@ -246,17 +255,18 @@ export class PushDocumentResponseModel extends $tea.Model {
 export class CollectDataRequestModel extends $tea.Model {
   headers?: { [key: string]: string };
   body: Behavior[];
+
   static names(): { [key: string]: string } {
     return {
-      headers: 'headers',
-      body: 'body',
+      headers: "headers",
+      body: "body"
     };
   }
 
   static types(): { [key: string]: any } {
     return {
-      headers: { 'type': 'map', 'keyType': 'string', 'valueType': 'string' },
-      body: { 'type': 'array', 'itemType': Behavior },
+      headers: { "type": "map", "keyType": "string", "valueType": "string" },
+      body: { "type": "array", "itemType": Behavior }
     };
   }
 
@@ -268,17 +278,18 @@ export class CollectDataRequestModel extends $tea.Model {
 export class CollectDataResponseModel extends $tea.Model {
   headers?: { [key: string]: string };
   body: Response;
+
   static names(): { [key: string]: string } {
     return {
-      headers: 'headers',
-      body: 'body',
+      headers: "headers",
+      body: "body"
     };
   }
 
   static types(): { [key: string]: any } {
     return {
-      headers: { 'type': 'map', 'keyType': 'string', 'valueType': 'string' },
-      body: Response,
+      headers: { "type": "map", "keyType": "string", "valueType": "string" },
+      body: Response
     };
   }
 
@@ -292,21 +303,22 @@ export class SearchResponse extends $tea.Model {
   requestId?: string;
   result?: SearchResult;
   errors?: Error[];
+
   static names(): { [key: string]: string } {
     return {
-      status: 'status',
-      requestId: 'request_id',
-      result: 'result',
-      errors: 'errors',
+      status: "status",
+      requestId: "request_id",
+      result: "result",
+      errors: "errors"
     };
   }
 
   static types(): { [key: string]: any } {
     return {
-      status: 'string',
-      requestId: 'string',
+      status: "string",
+      requestId: "string",
       result: SearchResult,
-      errors: { 'type': 'array', 'itemType': Error },
+      errors: { "type": "array", "itemType": Error }
     };
   }
 
@@ -323,27 +335,28 @@ export class SearchResult extends $tea.Model {
   total?: number;
   viewtotal?: number;
   num?: number;
-  items?: {[key: string]: any}[];
+  items?: { [key: string]: any }[];
   facet?: SearchResultFacet[];
+
   static names(): { [key: string]: string } {
     return {
-      searchtime: 'searchtime',
-      total: 'total',
-      viewtotal: 'viewtotal',
-      num: 'num',
-      items: 'items',
-      facet: 'facet',
+      searchtime: "searchtime",
+      total: "total",
+      viewtotal: "viewtotal",
+      num: "num",
+      items: "items",
+      facet: "facet"
     };
   }
 
   static types(): { [key: string]: any } {
     return {
-      searchtime: 'number',
-      total: 'number',
-      viewtotal: 'number',
-      num: 'number',
-      items: { 'type': 'array', 'itemType': 'object' },
-      facet: { 'type': 'array', 'itemType': SearchResultFacet },
+      searchtime: "number",
+      total: "number",
+      viewtotal: "number",
+      num: "number",
+      items: { "type": "array", "itemType": "object" },
+      facet: { "type": "array", "itemType": SearchResultFacet }
     };
   }
 
@@ -356,19 +369,20 @@ export class SearchResultItemFullJson extends $tea.Model {
   fields?: { [key: string]: any };
   variableValue?: { [key: string]: any };
   sortExprValues?: number[];
+
   static names(): { [key: string]: string } {
     return {
-      fields: 'fields',
-      variableValue: 'variableValue',
-      sortExprValues: 'sortExprValues',
+      fields: "fields",
+      variableValue: "variableValue",
+      sortExprValues: "sortExprValues"
     };
   }
 
   static types(): { [key: string]: any } {
     return {
-      fields: { 'type': 'map', 'keyType': 'string', 'valueType': 'any' },
-      variableValue: { 'type': 'map', 'keyType': 'string', 'valueType': 'any' },
-      sortExprValues: { 'type': 'array', 'itemType': 'number' },
+      fields: { "type": "map", "keyType": "string", "valueType": "any" },
+      variableValue: { "type": "map", "keyType": "string", "valueType": "any" },
+      sortExprValues: { "type": "array", "itemType": "number" }
     };
   }
 
@@ -380,17 +394,18 @@ export class SearchResultItemFullJson extends $tea.Model {
 export class SearchResultFacet extends $tea.Model {
   key?: string;
   items?: SearchResultFacetItems[];
+
   static names(): { [key: string]: string } {
     return {
-      key: 'key',
-      items: 'items',
+      key: "key",
+      items: "items"
     };
   }
 
   static types(): { [key: string]: any } {
     return {
-      key: 'string',
-      items: { 'type': 'array', 'itemType': SearchResultFacetItems },
+      key: "string",
+      items: { "type": "array", "itemType": SearchResultFacetItems }
     };
   }
 
@@ -402,17 +417,18 @@ export class SearchResultFacet extends $tea.Model {
 export class Error extends $tea.Model {
   code?: number;
   message?: string;
+
   static names(): { [key: string]: string } {
     return {
-      code: 'code',
-      message: 'message',
+      code: "code",
+      message: "message"
     };
   }
 
   static types(): { [key: string]: any } {
     return {
-      code: 'number',
-      message: 'string',
+      code: "number",
+      message: "string"
     };
   }
 
@@ -428,19 +444,20 @@ export class Document extends $tea.Model {
   cmd: string;
   timestamp?: number;
   fields: { [key: string]: any };
+
   static names(): { [key: string]: string } {
     return {
-      cmd: 'cmd',
-      timestamp: 'timestamp',
-      fields: 'fields',
+      cmd: "cmd",
+      timestamp: "timestamp",
+      fields: "fields"
     };
   }
 
   static types(): { [key: string]: any } {
     return {
-      cmd: 'string',
-      timestamp: 'number',
-      fields: { 'type': 'map', 'keyType': 'string', 'valueType': 'any' },
+      cmd: "string",
+      timestamp: "number",
+      fields: { "type": "map", "keyType": "string", "valueType": "any" }
     };
   }
 
@@ -455,17 +472,18 @@ export class Document extends $tea.Model {
 export class Behavior extends $tea.Model {
   cmd: string;
   fields: { [key: string]: any };
+
   static names(): { [key: string]: string } {
     return {
-      cmd: 'cmd',
-      fields: 'fields',
+      cmd: "cmd",
+      fields: "fields"
     };
   }
 
   static types(): { [key: string]: any } {
     return {
-      cmd: 'string',
-      fields: { 'type': 'map', 'keyType': 'string', 'valueType': 'any' },
+      cmd: "string",
+      fields: { "type": "map", "keyType": "string", "valueType": "any" }
     };
   }
 
@@ -481,19 +499,20 @@ export class Event2001Args extends $tea.Model {
   objectId?: string;
   objectType?: string;
   opsRequestMisc?: string;
+
   static names(): { [key: string]: string } {
     return {
-      objectId: 'object_id',
-      objectType: 'object_type',
-      opsRequestMisc: 'ops_request_misc',
+      objectId: "object_id",
+      objectType: "object_type",
+      opsRequestMisc: "ops_request_misc"
     };
   }
 
   static types(): { [key: string]: any } {
     return {
-      objectId: 'string',
-      objectType: 'string',
-      opsRequestMisc: 'string',
+      objectId: "string",
+      objectType: "string",
+      opsRequestMisc: "string"
     };
   }
 
@@ -507,21 +526,22 @@ export class SuggestionResponse extends $tea.Model {
   searchtime?: number;
   suggestions?: SuggestionResponseSuggestions[];
   errors?: Error[];
+
   static names(): { [key: string]: string } {
     return {
-      requestId: 'request_id',
-      searchtime: 'searchtime',
-      suggestions: 'suggestions',
-      errors: 'errors',
+      requestId: "request_id",
+      searchtime: "searchtime",
+      suggestions: "suggestions",
+      errors: "errors"
     };
   }
 
   static types(): { [key: string]: any } {
     return {
-      requestId: 'string',
-      searchtime: 'number',
-      suggestions: { 'type': 'array', 'itemType': SuggestionResponseSuggestions },
-      errors: { 'type': 'array', 'itemType': Error },
+      requestId: "string",
+      searchtime: "number",
+      suggestions: { "type": "array", "itemType": SuggestionResponseSuggestions },
+      errors: { "type": "array", "itemType": Error }
     };
   }
 
@@ -530,26 +550,24 @@ export class SuggestionResponse extends $tea.Model {
   }
 }
 
-/**
- *
- */
 export class Response extends $tea.Model {
   status?: string;
   requestId?: string;
   errors?: Error[];
+
   static names(): { [key: string]: string } {
     return {
-      status: 'status',
-      requestId: 'request_id',
-      errors: 'errors',
+      status: "status",
+      requestId: "request_id",
+      errors: "errors"
     };
   }
 
   static types(): { [key: string]: any } {
     return {
-      status: 'string',
-      requestId: 'string',
-      errors: { 'type': 'array', 'itemType': Error },
+      status: "string",
+      requestId: "string",
+      errors: { "type": "array", "itemType": Error }
     };
   }
 
@@ -561,17 +579,18 @@ export class Response extends $tea.Model {
 export class SearchResultFacetItems extends $tea.Model {
   value?: string;
   count?: number;
+
   static names(): { [key: string]: string } {
     return {
-      value: 'value',
-      count: 'count',
+      value: "value",
+      count: "count"
     };
   }
 
   static types(): { [key: string]: any } {
     return {
-      value: 'string',
-      count: 'number',
+      value: "string",
+      count: "number"
     };
   }
 
@@ -582,15 +601,16 @@ export class SearchResultFacetItems extends $tea.Model {
 
 export class SuggestionResponseSuggestions extends $tea.Model {
   suggestion?: string;
+
   static names(): { [key: string]: string } {
     return {
-      suggestion: 'suggestion',
+      suggestion: "suggestion"
     };
   }
 
   static types(): { [key: string]: any } {
     return {
-      suggestion: 'string',
+      suggestion: "string"
     };
   }
 
@@ -610,7 +630,7 @@ export default class Client {
     if (Util.isUnset($tea.toMap(config))) {
       throw $tea.newError({
         name: "ParameterMissing",
-        message: "'config' can not be unset",
+        message: "'config' can not be unset"
       });
     }
 
@@ -622,7 +642,7 @@ export default class Client {
       accessKeyId: config.accessKeyId,
       type: config.type,
       accessKeySecret: config.accessKeySecret,
-      securityToken: config.securityToken,
+      securityToken: config.securityToken
     });
     this._credential = new Credential(credentialConfig);
     this._endpoint = config.endpoint;
@@ -630,8 +650,8 @@ export default class Client {
     this._userAgent = config.userAgent;
   }
 
-  async _request(method: string, pathname: string, query: {[key: string ]: any}, headers: {[key: string ]: string}, body: any, runtime: $Util.RuntimeOptions): Promise<{[key: string ]: any}> {
-    let _runtime: { [key: string]: any } = {
+  async _request(method: string, pathname: string, query: { [key: string]: any }, headers: { [key: string]: string }, body: any, runtime: $Util.RuntimeOptions): Promise<{ [key: string]: any }> {
+    const _runtime: { [key: string]: any } = {
       timeouted: "retry",
       readTimeout: runtime.readTimeout,
       connectTimeout: runtime.connectTimeout,
@@ -641,21 +661,21 @@ export default class Client {
       maxIdleConns: runtime.maxIdleConns,
       retry: {
         retryable: runtime.autoretry,
-        maxAttempts: Util.defaultNumber(runtime.maxAttempts, 3),
+        maxAttempts: Util.defaultNumber(runtime.maxAttempts, 3)
       },
       backoff: {
         policy: Util.defaultString(runtime.backoffPolicy, "no"),
-        period: Util.defaultNumber(runtime.backoffPeriod, 1),
+        period: Util.defaultNumber(runtime.backoffPeriod, 1)
       },
-      ignoreSSL: runtime.ignoreSSL,
-    }
+      ignoreSSL: runtime.ignoreSSL
+    };
 
     let _lastRequest = null;
     let _now = Date.now();
     let _retryTimes = 0;
-    while ($tea.allowRetry(_runtime['retry'], _retryTimes, _now)) {
+    while ($tea.allowRetry(_runtime["retry"], _retryTimes, _now)) {
       if (_retryTimes > 0) {
-        let _backoffTime = $tea.getBackoffTime(_runtime['backoff'], _retryTimes);
+        let _backoffTime = $tea.getBackoffTime(_runtime["backoff"], _retryTimes);
         if (_backoffTime > 0) {
           await $tea.sleep(_backoffTime);
         }
@@ -670,12 +690,12 @@ export default class Client {
         request_.method = method;
         request_.pathname = pathname;
         request_.headers = {
-          'user-agent': this.getUserAgent(),
-          'Content-Type': 'application/json',
+          "user-agent": this.getUserAgent(),
+          "Content-Type": "application/json",
           Date: OpenSearchUtil.getDate(),
           host: Util.defaultString(this._endpoint, `opensearch-cn-hangzhou.aliyuncs.com`),
-          'X-Opensearch-Nonce': Util.getNonce(),
-          ...headers,
+          "X-Opensearch-Nonce": Util.getNonce(),
+          ...headers
         };
         if (!Util.isUnset(query)) {
           request_.query = Util.stringifyMapValue(query);
@@ -683,7 +703,6 @@ export default class Client {
 
         if (!Util.isUnset(body)) {
           let reqBody = Util.toJSONString(body);
-          request_.headers["Content-Type"] = "application/json";
           request_.headers["Content-MD5"] = OpenSearchUtil.getContentMD5(reqBody);
           request_.body = new $tea.BytesReadable(reqBody);
         }
@@ -697,7 +716,7 @@ export default class Client {
           throw $tea.newError({
             message: response_.statusMessage,
             data: objStr,
-            code: response_.statusCode,
+            code: response_.statusCode
           });
         }
 
@@ -705,7 +724,7 @@ export default class Client {
         let res = Util.assertAsMap(obj);
         return {
           body: res,
-          headers: response_.headers,
+          headers: response_.headers
         };
       } catch (ex) {
         if ($tea.isRetryable(ex)) {
@@ -731,10 +750,9 @@ export default class Client {
   async search(appName: string, request: SearchRequestModel): Promise<SearchResponseModel> {
     let runtime = new $Util.RuntimeOptions({
       connectTimeout: 5,
-      readTimeout: 10,
       autoretry: false,
       ignoreSSL: false,
-      maxIdleConns: 50,
+      maxIdleConns: 50
     });
     return await this.searchEx(appName, request, runtime);
   }
@@ -752,10 +770,9 @@ export default class Client {
   async suggest(appName: string, modelName: string, request: SuggestRequestModel): Promise<SuggestResponseModel> {
     let runtime = new $Util.RuntimeOptions({
       connectTimeout: 5,
-      readTimeout: 10,
       autoretry: false,
       ignoreSSL: false,
-      maxIdleConns: 50,
+      maxIdleConns: 50
     });
     return await this.suggestEx(appName, modelName, request, runtime);
   }
@@ -773,10 +790,9 @@ export default class Client {
   async pushDocument(appName: string, tableName: string, request: PushDocumentRequestModel): Promise<PushDocumentResponseModel> {
     let runtime = new $Util.RuntimeOptions({
       connectTimeout: 5,
-      readTimeout: 10,
       autoretry: false,
       ignoreSSL: false,
-      maxIdleConns: 50,
+      maxIdleConns: 50
     });
     return this.pushDocumentEx(appName, tableName, request, runtime);
   }
@@ -794,10 +810,9 @@ export default class Client {
   async collectData(appName: string, collectorName: string, request: CollectDataRequestModel): Promise<CollectDataResponseModel> {
     let runtime = new $Util.RuntimeOptions({
       connectTimeout: 5,
-      readTimeout: 10,
       autoretry: false,
       ignoreSSL: false,
-      maxIdleConns: 50,
+      maxIdleConns: 50
     });
     return await this.collectDataEx(appName, collectorName, request, runtime);
   }

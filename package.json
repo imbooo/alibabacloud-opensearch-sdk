@@ -1,12 +1,13 @@
 {
   "name": "opensearch-sdk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "lib/index.js",
   "files": [
     "lib",
     "types"
   ],
+  "types": "types",
   "scripts": {
     "test": "mocha -r ts-node/register test/**/*.spec.ts",
     "test-cov": "nyc -e .ts -r=html -r=text -r=lcov npm run test",

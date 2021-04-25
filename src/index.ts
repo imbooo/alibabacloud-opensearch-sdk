@@ -135,7 +135,7 @@ export class Client {
   async searchEx(search: SearchQuery, runtime: $Util.RuntimeOptions): Promise<SearchResponse> {
     const { fetch_fields, query, config = { start: 0, hit: 20, format: "fulljson" } } = search;
     //Config子句
-    const conf = Object.entries(config).map(([k, v]) => `${k}=${v}`).join(",");
+    const conf = Object.entries(config).map(([k, v]) => `${k}:${v}`).join(",");
     search.query = [query, `config=${conf}`].join("&&");
     delete search.config;
     // fetch_fields
